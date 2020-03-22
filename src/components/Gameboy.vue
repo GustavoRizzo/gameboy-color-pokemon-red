@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div id="screne1">
+    <div id="screne1"  >
         <div class="box">
             <div class="shell">
                 <div id="holes">
@@ -70,9 +70,7 @@
 export default {
     name: 'Gameboy',
     data() {
-        return {
-            msg: 'Welcome to Your Vue.js App'
-        }
+        return {}
     }
 }
 </script>
