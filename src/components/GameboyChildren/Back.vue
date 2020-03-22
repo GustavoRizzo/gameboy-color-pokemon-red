@@ -10,7 +10,7 @@
             <div class="cartridge-indent">
                 <div class="cartridge-indent-copy">
                 </div>
-                <div class="cartridge">
+                <div v-bind:class="cartridgeClass">
                     <div class="indent-1"></div>
                     <div class="indent-2"></div>
                     <div class="indent-3"></div>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="info-indent">
-                <div class="sticker">
+                <div v-on:click="insertCartridge" class="sticker">
                 </div>
             </div>
             <div class="battery-indent">
@@ -46,11 +46,15 @@ export default {
     name: 'Back',
     data() {
         return {
-            showBack: true
+            showBack: true,
+            cartridgeClass: "cartridge"
         }
     },
     methods: {
-
+        insertCartridge: function (){
+            this.cartridgeClass = "cartridge-active";
+            console.log("vai cartucho")
+        }
     }
 }
 </script>
