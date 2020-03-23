@@ -53,7 +53,11 @@ export default {
     methods: {
         insertCartridge: function (){
             this.cartridgeClass = "cartridge-active";
-            console.log("vai cartucho")
+            console.log("Banck: inserindo cartucho")
+            setTimeout( () => {
+                this.showBack = false;
+                this.$root.$emit('messege_cartrige_in');
+            }, 3500)
         }
     }
 }

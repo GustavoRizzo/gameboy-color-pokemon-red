@@ -29,6 +29,12 @@ export default {
         return {
             showFront: false
         }
+    },
+    mounted() {
+        this.$root.$on('messege_cartrige_in', () => {
+            console.log("Front: ok, entendido");
+            this.showFront = true;
+        });
     }
 }
 </script>
