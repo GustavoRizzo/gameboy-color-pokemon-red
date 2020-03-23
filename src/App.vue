@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Projeto Gameboy Color - Pokemon Red</h1>
+    <h1><b>Projeto Gameboy Color - Pokemon Red</b></h1>
     <router-view/>
   </div>
 </template>

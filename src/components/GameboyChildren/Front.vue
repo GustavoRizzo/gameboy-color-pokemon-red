@@ -5,7 +5,7 @@
             <div class="front-screen-indent">
                 <div class="on-circle"></div>
                 <div class="front-screen-container">
-                    <img class="screen" src="#" />
+                    <img class="screen" v-bind:src="screenPic" />
                 </div>
             </div>
             <div class="d-pad-container">
@@ -27,7 +27,25 @@ export default {
     name: 'Front',
     data() {
         return {
-            showFront: false
+            showFront: false,
+            screenPic: "https://tcrf.net/images/9/99/CGB_Bootstrap_ROM-title.png",
+            isGameRunnig: false
+        }
+    },
+    methods: {
+        changePic: function () {
+            this.isGameRunnig = true;
+            setTimeout(() => {
+                this.screenPic = "https://www.videogameschronicle.com/files/2019/03/Game-freak-logo-320x240.jpg";
+            }, 3000);
+            setTimeout(() => {
+                this.screenPic = "https://media0.giphy.com/media/Png2OI1tHaDmg/source.gif";
+            }, 6000);
+        }
+    },
+    updated() {
+        if(this.isGameRunnig==false){
+            this.changePic();
         }
     },
     mounted() {
